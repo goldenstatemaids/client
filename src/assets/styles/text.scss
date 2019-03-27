@@ -1,0 +1,34 @@
+@import "./colors.scss";
+
+$gsm-fallback-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin gsm-font-bold() {
+  font-family: "Roboto", $gsm-fallback-font-family;
+  font-weight: 700;
+}
+
+@mixin gsm-font-medium() {
+  font-family: "Roboto", $gsm-fallback-font-family;
+  font-weight: 500;
+}
+
+@mixin gsm-font-regular() {
+  font-family: "Roboto", $gsm-fallback-font-family;
+  font-weight: normal;
+}
+
+@mixin gsm-header() {
+  @include gsm-font-bold;
+  font-size: 22px;
+}
+
+@mixin gsm-label() {
+  @include gsm-font-medium;
+  font-size: 16px;
+  color: $gsm-dark-blue;
+}
+
+@mixin gsm-description() {
+  @include gsm-font-regular;
+  font-size: 12px;
+}
