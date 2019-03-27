@@ -1,41 +1,40 @@
-button {
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/text.scss";
+
+.gsm-btn {
     border-radius: 5px;
     padding: 10px 20px;
     border: none;
-}
 
-button:focus {
-    outline: 0;
-}
+    &:focus {
+        outline: 0;
+    }
 
-.primary {
-    background-color: blue;
-    color: white;
-}
+    &.primary {
+        background-color: $gsm-blue;
+        color: white;
 
-.primary:hover {
-    background-color: darkblue;
-}
+        &:hover {
+            background-color: $gsm-dark-blue;
+        }
+    }
 
+    &.transparent {
+        background-color: unset;
+        color: $gsm-blue;
+        border: 1px solid $gsm-blue;
 
+        &:hover {
+            background-color: $gsm-blue;
+            color: white;
+        }
+    }
 
-.transparent {
-    background-color: none;
-    color: blue;
-    border: 1px solid blue;
-}
+    &.light {
+        border: 1px solid $gsm-light-grey;
 
-.transparent:hover {
-    background-color: blue;
-    color: white;
-}
-
-
-
-.light {
-    border: 1px solid grey;
-}
-
-.light:hover {
-    background-color: grey;
+        &:hover {
+            background-color: $gsm-light-grey;
+        }
+    }
 }

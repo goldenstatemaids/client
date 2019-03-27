@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './App.scss';
+import ButtonComponent from "./components/button/button.component";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    public render(): JSX.Element {
+        return (
+            <div className="App">
+                <div style={{margin: "10px"}}>
+                    <ButtonComponent style="primary">
+                        Learn More! MORE STUFF
+                    </ButtonComponent>
+                </div>
+
+                <div style={{margin: "10px"}}>
+                    <ButtonComponent style="light">
+                        Nelly
+                    </ButtonComponent>
+                </div>
+
+                <div style={{margin: "10px"}}>
+                    <ButtonComponent style={"transparent"}>
+                        Beans
+                    </ButtonComponent>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
